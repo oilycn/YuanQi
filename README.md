@@ -4,7 +4,7 @@
 
 
 
- * Ubuntu 16+ / Debian 8+ / CentOS 7+ 系统 推荐使用 Debian 9 系统，脚本会自动启用 BBR 优化
+Ubuntu 16+ / Debian 8+ / CentOS 7+ 系统 推荐使用 Debian 9 系统，脚本会自动启用 BBR 优化
 
 sudo -i
 
@@ -24,6 +24,6 @@ bash <(curl -s -L https://git.io/jin-v2ray)
 
 bash <(curl -s -L https://git.io/jin-wiregurad)
 
-可视化web
+ * 一键安装wireguard脚本(Ubuntu 16.04)/可视化web
 
 bash <(curl -s -L https://git.io/jin-wireguard_web)
