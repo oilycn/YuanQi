@@ -17,13 +17,13 @@ bash <(curl -s -L https://git.io/jin-ssR)
 
 bash <(curl -s -L https://git.io/jin-v2ray)
 
+ * 一键安装wireguard脚本
+
+bash <(curl -s -L https://git.io/jin-wireguard)
+
  * 一键安装wireguard脚本(Ubuntu 16.04)
 
 bash <(curl -s -L https://git.io/jin-wiregurad)
-
- * 一键安装wireguard脚本(debian)
-
-bash <(curl -s -L https://git.io/jin-wireguard)
 
  * 一键安装wireguard脚本(Ubuntu 16.04)/可视化web
 
