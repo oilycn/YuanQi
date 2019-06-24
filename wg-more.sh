@@ -46,7 +46,7 @@ Info="${Green}[信息]${Font}"  &&  OK="${Green}[OK]${Font}"  &&  Error="${Red}[
 # 检查是否安装 WireGuard
 if [ ! -f '/usr/bin/wg' ]; then
     clear
-    echo -e "${RedBG}   一键安装 WireGuard 脚本 For Debian_9 Ubuntu Centos_7   ${Font}"
+    echo -e "${RedBG}   一键安装 WireGuard 脚本   ${Font}"
     echo -e "${GreenBG}     开源项目：https://github.com/hongwenjun/vps_setup    ${Font}"
     help_info
     echo -e "${Red}::  检测到你的vps没有安装wireguard，请选择复制一键脚本安装   ${Font}"
@@ -70,7 +70,7 @@ if [ ! -f '/usr/bin/qrencode' ]; then
 fi
 
 # 安装 bash wgmtu 脚本用来设置服务器
-wget -O ~/wgmtu  https://git.io/wgmtu 
+wget -O ~/wgluan  https://git.io/wgluan
 #############################################################
 
 # 打开ip4/ipv6防火墙转发功能
@@ -171,16 +171,16 @@ fi
 wg-quick down wg0
 wg-quick up wg0
 
-# 安装 bash wg5 命令，新手下载客户端配置用
+# 安装 bash wgnew 命令，新手下载客户端配置用
 conf_url=http://${serverip}:8000
-cat  <<EOF > ~/wg5
+cat  <<EOF > ~/wgnew
 next() {
     printf "# %-70s\n" "-" | sed 's/\s/-/g'
 }
 
 host=$(hostname -s)
 cd  /etc/wireguard/
-tar cvf  wg5clients.tar  client*  wg*
+tar cvf  wgclients.tar  client*  wg*
 echo -e  "${GreenBG}#  Windows 客户端配置，请复制配置文本 ${Font}"
 
 cat /etc/wireguard/client.conf       && next
@@ -188,14 +188,14 @@ cat /etc/wireguard/wg_${host}_2.conf   && next
 cat /etc/wireguard/wg_${host}_3.conf   && next
 cat /etc/wireguard/wg_${host}_4.conf   && next
 
-echo -e "${RedBG}   一键安装 WireGuard 脚本 For Debian_9 Ubuntu Centos_7   ${Font}"
-echo -e "${GreenBG}     开源项目：https://github.com/hongwenjun/vps_setup    ${Font}"
+echo -e "${RedBG}   一键安装 WireGuard 脚本   ${Font}"
+
 echo
-echo -e "# ${Info} 新手使用${GreenBG} bash wg5 ${Font} 命令，使用临时网页下载配置和手机客户端二维码配置"
-echo -e "# ${Info} 推荐使用${GreenBG} bash wgmtu ${Font} 命令，WireGuard 配置管理支持IPV6，稳定有待测试"
-echo -e "# ${Info} 自定端口${RedBG} bash <(curl -L -s https://git.io/fpnQt) ${GreenBG} 9999 ${Font}"
-echo -e "# ${Info} WG+SS域名分流升级命令 ${GreenBG} bash wgmtu setup ${Font}"
-# echo -e "# ${Info} 请网页打开 ${GreenBG}${conf_url}${Font} 下载配置文件 wg5clients.tar ，${RedBG}注意: 完成后请重启VPS.${Font}"
+echo -e "# ${Info} 新手使用${GreenBG} bash wgnew ${Font} 命令，使用临时网页下载配置和手机客户端二维码配置"
+echo -e "# ${Info} 推荐使用${GreenBG} bash wgluan ${Font} 命令，WireGuard 配置管理支持IPV6，稳定有待测试"
+echo -e "# ${Info} 自定端口${GreenBG} bash <(curl -L -s https://git.io/fpnQt) 9999 ${Font}"
+echo -e "# ${Info} WG+SS域名分流升级命令 ${GreenBG} bash wgluan setup ${Font}"
+# echo -e "# ${Info} 请网页打开 ${GreenBG}${conf_url}${Font} 下载配置文件 wgclients.tar ，${RedBG}注意: 完成后请重启VPS.${Font}"
 # python -m SimpleHTTPServer 8000 &
 echo ""
 # echo -e "# ${Info} 访问 ${GreenBG}${conf_url}${Font} 点PNG二维码， ${RedBG}手机扫描二维码后请立即重启VPS。${Font}"
@@ -208,6 +208,6 @@ echo -e "# ${Info} WG服务器相当于一个远程路由器，IP: 10.0.0.1,再�
 EOF
 
 # 显示管理脚本信息
-bash ~/wg5
-sed -i "s/# python -m/python -m/g"  ~/wg5
-sed -i "s/# echo -e/echo -e/g"  ~/wg5
+bash ~/wgnew
+sed -i "s/# python -m/python -m/g"  ~/wgnew
+sed -i "s/# echo -e/echo -e/g"  ~/wgnew
