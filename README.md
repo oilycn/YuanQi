@@ -5,7 +5,7 @@
 
 
 Ubuntu 16+ / Debian 8+ / CentOS 7+ 系统
-推荐使用 Debian 9 系统，脚本会自动启用 BBR 优化。
+推荐使用 Debian 9 系统，脚本会自动启用 BBR 优化
 
 sudo -i
 
