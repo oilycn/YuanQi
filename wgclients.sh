@@ -156,9 +156,9 @@ cat /etc/wireguard/wg_${host}_3.conf   && next
 cat /etc/wireguard/wg_${host}_4.conf   && next
 
 
-echo -e "# ${Info} 新手使用bash wg5 ${Font} 命令，使用临时网页下载配置和手机客户端二维码配置"
+echo -e "# 新手使用bash wg5 命令，使用临时网页下载配置和手机客户端二维码配置"
 
-echo -e "# ${Info} 自定端口bash <(curl -L -s https://git.io/fpnQt) 9999 ${Font}"
+echo -e "# 自定端口bash <(curl -L -s https://git.io/fpnQt) 9999 "
 
 
 
