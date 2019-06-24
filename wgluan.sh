@@ -1,7 +1,7 @@
 #!/bin/bash
-# WireGuard 管理使用命令 bash wgmtu    短网址: https://git.io/wgmtu
+# WireGuard 管理使用命令 bash wgluan    短网址: https://git.io/wgluan
 
-# Usage:  wget https://git.io/wgmtu && bash wgmtu
+# Usage:  wget https://git.io/wgluan && bash wgluan
 
 # 修改mtu数值
 setmtu(){
