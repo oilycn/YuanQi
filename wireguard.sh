@@ -147,7 +147,7 @@ wg-quick up wg0
 systemctl enable wg-quick@wg0
 
 # 查询WireGuard状态
-wg
+#wg
 
 # 以上配置文本只做参考文档使用，实际生成 WireGuard 多用户配置
 
