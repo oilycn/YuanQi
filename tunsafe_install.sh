@@ -216,15 +216,7 @@ EOF
 #开始菜单
 start_menu(){
     clear
-    green " ===================================="
-    green " 介绍：一键安装TunSafe                "
-    green " 系统：Ubuntu >= 16.04               "
-    green " 作者：atrandys                      "
-    green " 网站：www.atrandys.com              "
-    green " Youtube：atrandys                   "
-    green " ===================================="
-    echo
-    green " 1. 安装TunSafe"
+    green " 1. 安装wireguard"
     green " 2. 查看客户端二维码"
     green " 3. 增加用户"
     yellow " 0. 退出脚本"
