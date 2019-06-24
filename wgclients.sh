@@ -49,8 +49,8 @@ PrivateKey = $(cat cprivatekey)
 Address = 10.80.80.2/24
 DNS = 8.8.8.8
 MTU = $mtu
-PreUp =  start   .\route\routes-up.bat
-PostDown = start  .\route\routes-down.bat
+#  PreUp =  start   .\route\routes-up.bat
+#  PostDown = start  .\route\routes-down.bat
 
 [Peer]
 PublicKey = $(cat spublickey)
@@ -101,7 +101,7 @@ wg-quick down wg0
 wg-quick up wg0
 wg
 
-cat <<EOF >wgj
+cat <<EOF >wg5
 # 打包10个客户端配置，手机扫描二维码2号配置，PC使用1号配置
 next() {
     printf "# %-70s\n" "-" | sed 's/\s/-/g'
@@ -109,7 +109,7 @@ next() {
 host=$(hostname -s)
 
 cd  /etc/wireguard/
-tar cvf  wgclients.tar  client*  wg_*
+tar cvf  wg5clients.tar  client*  wg_*
 cat /etc/wireguard/client$i.conf | qrencode -o - -t ansi256
 echo "# 手机扫描二维码2号配置，PC使用配置复制下面文本"
 
@@ -117,13 +117,13 @@ cat /etc/wireguard/client.conf       && next
 cat /etc/wireguard/client$i.conf   && next
 
 echo "#  wg 查看有效的客户端；删除客户端使用  wg set wg0 peer xxxx_填对应IP的公钥_xxxx remove"
-echo "#  再次显示本文本使用 bash wg 命令，通过下面2种方式获得其他的配置文件"
-echo "#  请浏览器访问   http://${serverip}:8000  下载配置文件 wgclients.tar ，完成后请重启vps"
-echo "#  scp root@10.0.0.1:/etc/wireguard/wg5clients.tar   wgclients.tar"
+echo "#  再次显示本文本使用 bash wg5 命令，通过下面2种方式获得其他的配置文件"
+echo "#  请浏览器访问   http://${serverip}:8000  下载配置文件 wg5clients.tar ，完成后请重启vps"
+echo "#  scp root@10.0.0.1:/etc/wireguard/wg5clients.tar   wg5clients.tar"
 
 # 简单的web服务器，使用后，请重启vps
 python -m SimpleHTTPServer 8000
 
 EOF
-cp wgj ~/wgj
-bash wgj
+cp wg5 ~/wg5
+bash wg5
