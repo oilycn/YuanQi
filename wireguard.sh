@@ -152,7 +152,7 @@ wg
 # 以上配置文本只做参考文档使用，实际生成 WireGuard 多用户配置
 
 # 一键 WireGuard 多用户配置共享脚本
-wget -qO- https://git.io/jinwgmore | bash
+wget -qO- https://git.io/wgclients | bash
 
 }
 # ======= 容错：检查系统，调用 Ubuntu Centos 系统对应安装脚本 ========
