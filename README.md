@@ -21,10 +21,6 @@ bash <(curl -s -L https://git.io/jin-v2ray)
 
 bash <(curl -s -L https://git.io/jin-wireguard)
 
- * 一键安装wireguard脚本(Ubuntu 16.04)
-
-bash <(curl -s -L https://git.io/jin-wiregurad)
-
  * 一键安装wireguard脚本(Ubuntu 16.04)/可视化web
 
 bash <(curl -s -L https://git.io/jin-wireguard_web)
