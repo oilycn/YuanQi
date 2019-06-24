@@ -1,7 +1,5 @@
 
 #!/bin/bash
-#  shortcode为自定义的后缀
-bash shortgit.sh url jinsama-v2ray
 
 red='\e[91m'
 green='\e[92m'
