@@ -6,11 +6,11 @@ sudo -i
 
 一键安装ss脚本
 
-bash <(curl -s -L https://raw.githubusercontent.com/Aiyuanjiang/jinsama/jin/ss-install.sh)
+bash <(curl -s -L https://git.io/jin-ss)
 
 一键安装v2ray脚本
 
-bash <(curl -s -L https://raw.githubusercontent.com/Aiyuanjiang/jinsama/jin/v2ray-install.sh)
+bash <(curl -s -L https://git.io/jin-v2ray)
 
 
 
