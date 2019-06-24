@@ -16,16 +16,16 @@ ipv6_range="fd08:620c:4df0:65eb::"
 help_info() {
 cat  <<EOF
 # 一键安装wireguard 脚本 Debian 9 (源:逗比网安装笔记)
-wget -qO- git.io/fptwc | bash
+wget -qO- git.io/wireguard | bash
 
 # 一键安装wireguard 脚本 Ubuntu   (源:逗比网安装笔记)
-wget -qO- git.io/fpcnL | bash
+wget -qO- git.io/jinwgubuntu | bash
 
 # CentOS 7 一键脚本安装WireGuard  (官方脚本自动升级内核)
-wget -qO- git.io/fhnhS | bash
+wget -qO- git.io/jinwgcentos7 | bash
 
 #  一键安装shadowsocks-libev
-wget -qO- git.io/fhExJ | bash
+wget -qO- git.io/jinsslibev | bash
 EOF
 }
 #############################################################
