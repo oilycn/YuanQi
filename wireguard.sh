@@ -68,7 +68,7 @@ PostUp   = iptables -A FORWARD -i wg0 -j ACCEPT; iptables -A FORWARD -o wg0 -j A
 PostDown = iptables -D FORWARD -i wg0 -j ACCEPT; iptables -D FORWARD -o wg0 -j ACCEPT; iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE
 
 # 服务端监听端口，可以自行修改
-ListenPort = 9999
+ListenPort = 1215
 
 # 服务端请求域名解析 DNS
 DNS = 8.8.8.8
@@ -152,7 +152,7 @@ wg
 # 以上配置文本只做参考文档使用，实际生成 WireGuard 多用户配置
 
 # 一键 WireGuard 多用户配置共享脚本
-wget -qO- https://git.io/fpnQt | bash
+wget -qO- https://git.io/jinwgmore | bash
 
 }
 # ======= 容错：检查系统，调用 Ubuntu Centos 系统对应安装脚本 ========
@@ -179,12 +179,12 @@ wireguard_config(){
     if [[ ${release} == "centos" ]]; then
     	yum install -y wget vim curl
         # CentOS 7 一键脚本安装WireGuard  (官方脚本自动升级内核)
-		wget -qO- git.io/fhnhS | bash
+		wget -qO- git.io/jinwgcenos7 | bash
     fi
 
     if [[ ${release} == "ubuntu" ]]; then
         # 一键安装wireguard 脚本 Ubuntu   (源:逗比网安装笔记)
-		wget -qO- git.io/fpcnL | bash
+		wget -qO- git.io/jinwgUbuntu | bash
     fi
 
     if [[ ${release} == "debian" ]]; then
