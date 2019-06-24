@@ -1,17 +1,13 @@
 * [智障圆圆](https://github.com/Aiyuanjiang/jinsama)
 
 
+
+
 一键安装v2ray脚本
 
 sudo -i
 
 bash <(curl -s -L https://raw.githubusercontent.com/Aiyuanjiang/jinsama/jin/v2ray-install.sh)
-
-
-
-
-
-
 
 
 
