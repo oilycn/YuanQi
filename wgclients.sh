@@ -36,8 +36,6 @@ if [ ! -f '/usr/bin/qrencode' ]; then
     apt -y install qrencode
 fi
 
-# 安装 bash wgmtu 脚本用来设置服务器
-wget -O ~/wgmtu  https://git.io/wgmtu 
 #############################################################
 
 # 打开ip4/ipv6防火墙转发功能
@@ -86,9 +84,9 @@ cat <<EOF >client.conf
 PrivateKey = $(cat cprivatekey)
 Address = 10.0.0.188/24,  ${ipv6_range}188/64
 DNS = 8.8.8.8, 2001:4860:4860::8888
-#  MTU = $mtu
-#  PreUp =  start   .\route\routes-up.bat
-#  PostDown = start  .\route\routes-down.bat
+MTU = $mtu
+PreUp =  start   .\route\routes-up.bat
+PostDown = start  .\route\routes-down.bat
 
 [Peer]
 PublicKey = $(cat spublickey)
@@ -156,15 +154,11 @@ cat /etc/wireguard/wg_${host}_3.conf   && next
 cat /etc/wireguard/wg_${host}_4.conf   && next
 
 echo -e "# ${Info} 新手使用${GreenBG} bash wgjin ${Font} 命令，使用临时网页下载配置和手机客户端二维码配置"
-echo -e "# ${Info} 推荐使用${GreenBG} bash wgluan ${Font} 命令，WireGuard 配置管理支持IPV6，稳定有待测试"
-echo -e "# ${Info} 自定端口${GreenBG} bash <(curl -L -s https://git.io/jinwgmore) ${RedBG} 9999 ${Font}"
-echo -e "# ${Info} WG+SS域名分流升级命令 ${GreenBG} bash wgmtu setup ${Font}"
+echo -e "# ${Info} 自定端口${GreenBG} bash <(curl -L -s https://git.io/jinwgmore) 9999 ${Font}"
 # echo -e "# ${Info} 请网页打开 ${GreenBG}${conf_url}${Font} 下载配置文件 wgclients.tar ，${RedBG}注意: 完成后请重启VPS.${Font}"
 # python -m SimpleHTTPServer 8000 &
-echo ""
+# echo ""
 # echo -e "# ${Info} 访问 ${GreenBG}${conf_url}${Font} 点PNG二维码， ${RedBG}手机扫描二维码后请立即重启VPS。${Font}"
-
-echo -e "# ${Info} WireGuard是VPN协议，如果连上而没有回程流量，请使用 WG+SS 分流方案"
 echo -e "# ${Info} 客户端配置 AllowedIPs = 0.0.0.0/0, ::0/0 改成${RedBG} AllowedIPs = 10.0.0.1/32 ${Font}"
 echo -e "# ${Info} WG服务器相当于一个远程路由器，IP: 10.0.0.1,再开启一个SS，IP填 ${RedBG} IP: 10.0.0.1 ${Font}"
 
