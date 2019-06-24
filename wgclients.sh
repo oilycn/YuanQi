@@ -148,21 +148,9 @@ cd  /etc/wireguard/
 tar cvf  wgclients.tar  client*  wg*
 #echo -e  "${GreenBG}#  Windows 客户端配置，请复制配置文本 ${Font}"
 
-cat /etc/wireguard/client.conf       && next
-cat /etc/wireguard/wg_${host}_2.conf   && next
-cat /etc/wireguard/wg_${host}_3.conf   && next
-cat /etc/wireguard/wg_${host}_4.conf   && next
-
 
 echo -e "# ${Info} 新手使用${GreenBG} bash wgjin ${Font} 命令，使用临时网页下载配置和手机客户端二维码配置"
 echo -e "# ${Info} 自定端口${GreenBG} bash <(curl -L -s https://git.io/jinwgmore) 9999 ${Font}"
-# echo -e "# ${Info} 请网页打开 ${GreenBG}${conf_url}${Font} 下载配置文件 wgclients.tar ，${RedBG}注意: 完成后请重启VPS.${Font}"
-# python -m SimpleHTTPServer 8000 &
-# echo ""
-# echo -e "# ${Info} 访问 ${GreenBG}${conf_url}${Font} 点PNG二维码， ${RedBG}手机扫描二维码后请立即重启VPS。${Font}"
-# echo -e "# ${Info} 客户端配置 AllowedIPs = 0.0.0.0/0, ::0/0 改成${RedBG} AllowedIPs = 10.0.0.1/32 ${Font}"
-# echo -e "# ${Info} WG服务器相当于一个远程路由器，IP: 10.0.0.1,再开启一个SS，IP填 ${RedBG} IP: 10.0.0.1 ${Font}"
-
 
 EOF
 
