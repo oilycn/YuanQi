@@ -17,5 +17,7 @@ bash <(curl -s -L https://git.io/jin-ss)
 
 bash <(curl -s -L https://git.io/jin-v2ray)
 
+一键安装wireguard脚本(Ubuntu 16.04)
 
+wget https://raw.githubusercontent.com/Aiyuanjiang/jinsama/jin/tunsafe_install.sh && chmod +x tunsafe_install.sh && ./tunsafe_install.sh
 
