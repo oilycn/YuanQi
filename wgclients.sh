@@ -138,34 +138,34 @@ fi
 # 重启wg服务器
 wg-quick down wg0
 wg-quick up wg0
-
-# 安装 bash wgjin 命令，新手下载客户端配置用
+# 安装 bash wg5 命令，新手下载客户端配置用
 conf_url=http://${serverip}:8000
-cat  <<EOF > ~/wgjin
+cat  <<EOF > ~/wg5
 next() {
     printf "# %-70s\n" "-" | sed 's/\s/-/g'
 }
 
 host=$(hostname -s)
 cd  /etc/wireguard/
-tar cvf  wgclients.tar  client*  wg*
-#echo -e  "${GreenBG}#  Windows 客户端配置，请复制配置文本 ${Font}"
+tar cvf  wg5clients.tar  client*  wg*
+
 
 cat /etc/wireguard/client.conf       && next
 cat /etc/wireguard/wg_${host}_2.conf   && next
 cat /etc/wireguard/wg_${host}_3.conf   && next
 cat /etc/wireguard/wg_${host}_4.conf   && next
 
-echo
-echo -e "# ${Info} 新手使用 bash wgjin ${Font} 命令，使用临时网页下载配置和手机客户端二维码配置"
-#echo -e "# ${Info} 推荐使用 bash wgluan ${Font} 命令，WireGuard 配置管理支持IPV6，稳定有待测试"
-echo -e "# ${Info} 自定端口 bash <(curl -L -s https://git.io/fpnQt) 9999 ${Font}"
+
+echo -e "# ${Info} 新手使用bash wg5 ${Font} 命令，使用临时网页下载配置和手机客户端二维码配置"
+
+echo -e "# ${Info} 自定端口bash <(curl -L -s https://git.io/fpnQt) 9999 ${Font}"
 
 
 
 EOF
 
 # 显示管理脚本信息
-bash ~/wgjin
-sed -i "s/# python -m/python -m/g"  ~/wgjin
-sed -i "s/# echo -e/echo -e/g"  ~/wgjin
+bash ~/wg5
+sed -i "s/# python -m/python -m/g"  ~/wg5
+sed -i "s/# echo -e/echo -e/g"  ~/wg5
+
