@@ -1,6 +1,6 @@
 #!/bin/bash
 
-WG_PORT='51820'
+WG_PORT='52147'
 IPAddr=`wget --no-check-certificate -qO- http://moeclub.org/address`
 POOL='https://deb.debian.org/debian/pool/main/w/wireguard/'
 
