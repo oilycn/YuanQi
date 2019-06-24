@@ -216,6 +216,8 @@ EOF
 #开始菜单
 start_menu(){
     clear
+    green " wireguard安装脚本"
+    echo
     green " 1. 安装wireguard"
     green " 2. 查看客户端二维码"
     green " 3. 增加用户"
