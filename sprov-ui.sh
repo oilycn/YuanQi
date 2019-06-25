@@ -184,9 +184,6 @@ uninstall() {
     echo ""
     echo -e "${gree}卸载成功${plain}，感谢你的使用，如果你有更多的建议或意见，可以在以下地方进行讨论: "
     echo ""
-    echo -e "Telegram 群组: ${green}https://t.me/sprov_blog${plain}"
-    echo -e "Github issues: ${green}https://github.com/yuyeah/sprov-ui/issues${plain}"
-    echo -e "博客: ${green}https://blog.sprov.xyz/sprov-ui${plain}"
 
     if [[ $# == 0 ]]; then
         before_show_menu
@@ -326,7 +323,7 @@ show_log() {
 }
 
 install_bbr() {
-    bash <(curl -L -s https://github.com/seedc/sprov-ui/blob/bbr.sh)
+    bash <(curl -L -s https://raw.githubusercontent.com/Aiyuanjiang/jinsama/jin/bbr.sh)
     if [[ $? == 0 ]]; then
         echo ""
         echo -e "${green}安装 bbr 成功${plain}"
