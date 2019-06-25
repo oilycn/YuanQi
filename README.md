@@ -25,6 +25,6 @@ sudo -i
 
 `bash <(curl -s -L https://git.io/jin-wireguard_web)`
 
- * 一键安装v2ray gui脚本
+ * 一键安装v2ray sprov-ui脚本
  
 `bash <(curl -s -L https://git.io/sprov-ui)`
