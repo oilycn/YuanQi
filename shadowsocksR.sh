@@ -1153,7 +1153,7 @@ install_main(){
     fi
 
     echo
-   @ echo "Welcome to visit: https://teddysun.com/486.html"
+  # echo "Welcome to visit: https://teddysun.com/486.html"
     echo "Enjoy it!"
     echo
 }
