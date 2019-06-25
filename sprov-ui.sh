@@ -155,7 +155,7 @@ update() {
         return 0
     fi
     install_base
-    bash <(curl -L -s https://github.com/seedc/sprov-ui/blob/install.sh)
+    bash <(curl -L -s https://raw.githubusercontent.com/Aiyuanjiang/jinsama/jin/install.sh)
     if [[ $? == 0 ]]; then
         if [[ $# == 0 ]]; then
             restart
