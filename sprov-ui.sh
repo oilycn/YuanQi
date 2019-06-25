@@ -155,7 +155,7 @@ update() {
         return 0
     fi
     install_base
-    bash <(curl -L -s https://raw.githubusercontent.com/Aiyuanjiang/jinsama/jin/install.sh)
+    bash <(curl -L -s https://raw.githubusercontent.com/yuyeah/sprov-ui/master/install.sh)
     if [[ $? == 0 ]]; then
         if [[ $# == 0 ]]; then
             restart
@@ -336,7 +336,7 @@ install_bbr() {
 }
 
 update_shell() {
-    wget -O /usr/bin/sprov-ui -N --no-check-certificate https://github.com/seedc/sprov-ui/blob/sprov-ui.sh
+    wget -O /usr/bin/sprov-ui -N --no-check-certificate https://raw.githubusercontent.com/yuyeah/sprov-ui/master/sprov-ui.sh
     if [[ $? != 0 ]]; then
         echo ""
         echo -e "${red}下载脚本失败，请检查本机能否连接 Github${plain}"
