@@ -5,6 +5,10 @@ Ubuntu 16+ / Debian 8+ / CentOS 7+ 系统 推荐使用 Debian 9 系统，脚本�
 获取root权限
 sudo -i
 
+ * 一键bbr加速脚本
+
+`bash <(curl -s -L https://git.io/jin-bbr)`
+
  * 一键安装ss脚本
 
 `bash <(curl -s -L https://git.io/jin-ss)`
