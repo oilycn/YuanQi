@@ -7,24 +7,24 @@ sudo -i
 
  * 一键安装ss脚本
 
-'bash <(curl -s -L https://git.io/jin-ss)'
+`bash <(curl -s -L https://git.io/jin-ss)
 
  * 一键安装ssR脚本
 
-'bash <(curl -s -L https://git.io/jin-ssR)'
+`bash <(curl -s -L https://git.io/jin-ssR)
 
  * 一键安装v2ray脚本
 
-'bash <(curl -s -L https://git.io/jin-v2ray)'
+`bash <(curl -s -L https://git.io/jin-v2ray)
 
  * 一键安装wireguard脚本
 
-'bash <(curl -s -L https://git.io/jin-wireguard)'
+`bash <(curl -s -L https://git.io/jin-wireguard)
 
  * 一键安装wireguard脚本(Ubuntu 16.04)/可视化web
 
-'bash <(curl -s -L https://git.io/jin-wireguard_web)'
+`bash <(curl -s -L https://git.io/jin-wireguard_web)
 
  * 一键安装v2ray gui脚本
  
-'bash <(curl -s -L https://git.io/sprov-ui)'
+`bash <(curl -s -L https://git.io/sprov-ui)
