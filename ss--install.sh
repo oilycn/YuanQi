@@ -57,7 +57,7 @@ shadowsocks_port_config() {
 	while :; do
 		# echo -e "请输入 "$yellow"Shadowsocks"$none" 端口 ["$magenta"1-65535"$none"]"
 		read -p "$(echo -e "请输入$yellow Shadowsocks $none端口 [${magenta}1-65535$none]...(默认端口: ${cyan}${random}$none):") " ssport
-		[ -z "$ssport" ] && ssport=$random
+		[ -z "$ssport" ] && ssport=59958#$random
 		case $ssport in
 		[1-9] | [1-9][0-9] | [1-9][0-9][0-9] | [1-9][0-9][0-9][0-9] | [1-5][0-9][0-9][0-9][0-9] | 6[0-4][0-9][0-9][0-9] | 65[0-4][0-9][0-9] | 655[0-3][0-5])
 			echo
@@ -78,8 +78,8 @@ shadowsocks_password_config() {
 	echo
 	while :; do
 		# echo -e "请输入 "$yellow"Shadowsocks"$none" 密码"
-		read -p "$(echo -e "请输入$yellow Shadowsocks $none密码...(默认密码: ${cyan}233blog.com$none)"): " sspass
-		[ -z "$sspass" ] && sspass="233blog.com"
+		read -p "$(echo -e "请输入$yellow Shadowsocks $none密码...(默认密码: ${cyan}xiongjin147$none)"): " sspass
+		[ -z "$sspass" ] && sspass="xiongjin147"
 		case $sspass in
 		*[/$]*)
 			echo
@@ -112,8 +112,8 @@ shadowsocks_ciphers_config() {
 			fi
 		done
 		echo
-		read -p "$(echo -e "(默认加密协议: ${cyan}${ciphers[11]}$none)"):" ssciphers_opt
-		[ -z "$ssciphers_opt" ] && ssciphers_opt=12
+		read -p "$(echo -e "(默认加密协议: ${cyan}${ciphers[1]}$none)"):" ssciphers_opt
+		[ -z "$ssciphers_opt" ] && ssciphers_opt=1
 		case $ssciphers_opt in
 		[1-9] | 1[0-2])
 			ssciphers=${ciphers[$ssciphers_opt - 1]}
