@@ -193,8 +193,8 @@ install_node(){
 	}
 	# 取消文件数量限制
 	sed -i '$a * hard nofile 512000\n* soft nofile 512000' /etc/security/limits.conf
-	read -p "请输入面板的域名或ip(默认:https://jinsama.tk or http://114.114.114.114): " Userdomain
-	[[ -z $Userdomain ]] && Userdomain="https://jinsama.tk"
+	read -p "请输入面板的域名或ip(默认:http://jinsama.tk or http://114.114.114.114): " Userdomain
+	[[ -z $Userdomain ]] && Userdomain="http://jinsama.tk"
 	echo -e "域名为${Userdomain}"
 	read -p "请输入面板的muKey(默认:xiongjin147): " Usermukey
 	[[ -z $Usermukey ]] && Usermukey="xiongjin147"
