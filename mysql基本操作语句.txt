@@ -1,0 +1,47 @@
+create table students(
+id int unsigned not null auto_increment primary key,
+name char(8) not null,
+sex char(4) not null,
+age tinyint unsigned not null,
+tel char(13) null default "-"
+);
+
+insert into students values(NULL, "王刚", "男", 20, "13811371377");
+
+select name, age from students;
+
+select * from students where sex="女";
+
+select * from students where age > 21;
+
+select * from students where name like "%王%";
+
+update students set tel=default where id=5;
+
+update students set age=age+1;
+
+update students set name="张伟鹏", age=19 where tel="13288097888";
+
+delete from students where id=2;
+
+delete from students where age<20;
+
+delete from students;
+
+alter table students add address char(60);
+
+alter table students add birthday date after age;
+
+alter table students change tel telphone char(13) default "-";
+
+alter table students change name name char(16) not null;
+
+alter table students drop birthday;
+
+alter table students rename workmates;
+
+drop table workmates;
+
+drop database samp_db;
+
+mysqladmin -u root -p password 新密码
