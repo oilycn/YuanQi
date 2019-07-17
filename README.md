@@ -17,6 +17,10 @@ sudo -i
 
 `bash <(curl -s -L https://git.io/jin-ssR)`
 
+ * 一键安装brook脚本
+
+`bash <(curl -s -L https://git.io/jin-brook)`
+
  * 一键安装v2ray脚本
 
 `bash <(curl -s -L https://git.io/jin-v2ray)`
@@ -32,3 +36,4 @@ sudo -i
  * 一键安装v2ray sprov-ui脚本
  
 `bash <(curl -s -L https://git.io/sprov-ui)`
+
