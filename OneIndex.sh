@@ -265,7 +265,7 @@ main(){
     is_root
 	sleep 2
             standard
-            ssl
+            #ssl
 }
 
 main
