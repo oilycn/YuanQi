@@ -37,3 +37,6 @@ sudo -i
  
 `bash <(curl -s -L https://git.io/sprov-ui)`
 
+ * 一键安装wireguard脚本(Ubuntu 18.04更高)/可视化web
+
+`bash <(curl -s -L https://raw.githubusercontent.com/Aiyuanjiang/oxmo/jin/subspace_install.sh)`
