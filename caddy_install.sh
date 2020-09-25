@@ -51,11 +51,11 @@ Download_caddy(){
 	fi
 	
 	if [[ ${bit} == "x86_64" ]]; then
-		wget --no-check-certificate -O "caddy_linux.tar.gz" "https://caddyserver.com/api/download?os=linux&arch=amd64${extension_all}"
+		wget --no-check-certificate -O "caddy_linux.tar.gz" "https://caddyserver.com/api/download?os=linux&arch=amd64"
 	elif [[ ${bit} == "i386" || ${bit} == "i686" ]]; then
-		wget --no-check-certificate -O "caddy_linux.tar.gz" "https://caddyserver.com/api/download?os=linux&arch=386${extension_all}"
+		wget --no-check-certificate -O "caddy_linux.tar.gz" "https://caddyserver.com/api/download?os=linux&arch=386"
 	elif [[ ${bit} == "armv7l" ]]; then
-		wget --no-check-certificate -O "caddy_linux.tar.gz" "https://caddyserver.com/api/download?os=linux&arch=arm&arm=7${extension_all}"
+		wget --no-check-certificate -O "caddy_linux.tar.gz" "https://caddyserver.com/api/download?os=linux&arch=arm&arm=7"
 	else
 		echo -e "${Error_font_prefix}[错误]${Font_suffix} 不支持 [${bit}] ! 请向本站反馈[]中的名称，我会看看是否可以添加支持。" && exit 1
 	fi
