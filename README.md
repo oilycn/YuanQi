@@ -40,3 +40,8 @@ sudo -i
  * 一键安装wireguard脚本(Ubuntu 18.04更高)/可视化web
 
 `bash <(curl -s -L https://raw.githubusercontent.com/Aiyuanjiang/oxmo/jin/subspace_install.sh)`
+
+ * 最新一键安装V2ray+cdn
+ 
+`wget -N --no-check-certificate -q -O install.sh "https://raw.githubusercontent.com/wulabing/V2Ray_ws-tls_bash_onekey/master/install.sh" && chmod +x install.sh && bash install.sh`
+
