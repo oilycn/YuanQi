@@ -46,5 +46,5 @@
 #### 安装 & 升级 X-ui 面板
 #### 安装及升级的一键代码
 
-`bash <(curl -Ls https://raw.githubusercontent.com/sprov065/x-ui/master/install.sh)`
+`bash <(curl -Ls https://raw.githubusercontent.com/oxmosama/oxmo/WanFeng/Oracle_X_ui/x_ui_install.sh)`
 
