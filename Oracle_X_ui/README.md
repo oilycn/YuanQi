@@ -32,7 +32,7 @@
 #### 80 端口空闲的证书申请方式
 #### 自行更换代码中的域名、邮箱为你解析的域名及邮箱
 
-`~/.acme.sh/acme.sh --register-account -m oxmosama@qq.com`
+`~/.acme.sh/acme.sh --register-account -m wfpas@qq.com`
 
 `~/.acme.sh/acme.sh  --issue -d ui.oxmo.cn   --standalone`
 
@@ -46,5 +46,5 @@
 #### 安装 & 升级 X-ui 面板
 #### 安装及升级的一键代码
 
-`bash <(curl -Ls https://raw.githubusercontent.com/oxmosama/oxmo/WanFeng/Oracle_X_ui/x_ui_install.sh)`
+`bash <(curl -Ls https://raw.githubusercontent.com/wfpas/oxmo/WanFeng/Oracle_X_ui/x_ui_install.sh)`
 
