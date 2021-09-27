@@ -1,3 +1,3 @@
 ## 晚风吻尽荷花叶
 
-前往：[https://www.wfpas.com/](https://www.wfpas.com/)
+前往：[https://wfpas.com/](https://wfpas.com/)
