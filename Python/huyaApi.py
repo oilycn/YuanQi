@@ -5,6 +5,10 @@ import json
 
 global allpage
 allpage = 1
+# 手动设置爬取次数 大于 0 生效
+global nextpage
+nextpage = 0
+
 url = 'https://www.huya.com/cache.php?m=LiveList&do=getLiveListByPage&tagAll=0&callback=getLiveListJsonpCallback&page=' + \
     str(allpage)
 headers = {
@@ -15,6 +19,7 @@ headers = {
 def GoToNextPage(limt):
     # 下一页链接
     global allpage
+    global nextpage
     if allpage <= limt:
         allpage = allpage + 1
         return 'https://www.huya.com/cache.php?m=LiveList&do=getLiveListByPage&tagAll=0&callback=getLiveListJsonpCallback&page=' + str(allpage)
@@ -23,15 +28,28 @@ def GoToNextPage(limt):
 
 
 def GetTitleAndUrl(url_):
+    if nextpage > 0:
+        limt_page = nextpage
+
     # 获取直播间标题和链接
-    # limt_page = 5 # 手动设置爬取次数
     try:
         r = requests.get(url_, headers=headers)
-        jResponse = re.findall(r'getLiveListJsonpCallback\((.*?)\)', r.text, re.S)[0]
+        jResponse = re.findall(
+            r'getLiveListJsonpCallback\((.*?)\)', r.text, re.S)[0]
         jdata = json.loads(jResponse)
         # print(type(jdata))
         room_data = jdata['data']['datas']
-        limt_page = jdata['data']['totalPage']
+        
+        # 判断变量 limt_page 是否存在
+        try:
+            limt_page
+        except NameError:
+            var_exists = False
+        else:
+            var_exists = True
+
+        if var_exists == False:
+            limt_page = jdata['data']['totalPage']
         for zb in room_data:
             # 直播间标题
             zbj_url = 'https://www.huya.com/' + zb['privateHost']
@@ -41,6 +59,7 @@ def GetTitleAndUrl(url_):
         GetTitleAndUrl(GoToNextPage(limt_page))
     except:
         GetTitleAndUrl(GoToNextPage(limt_page))
+
 
 if __name__ == '__main__':
     GetTitleAndUrl(url)
@@ -79,4 +98,3 @@ if __name__ == '__main__':
 # "isRoomPay":"0",
 # "roomPayTag":"",
 # "isWatchTogetherVip":0
-            
