@@ -15,15 +15,16 @@ headers = {
 def GoToNextPage(limt):
     # 下一页链接
     global allpage
-    if allpage < limt:
+    if allpage <= limt:
         allpage = allpage + 1
         return 'https://www.huya.com/cache.php?m=LiveList&do=getLiveListByPage&tagAll=0&callback=getLiveListJsonpCallback&page=' + str(allpage)
     else:
-        pass
+        exit()
 
 
 def GetTitleAndUrl(url_):
     # 获取直播间标题和链接
+    # limt_page = 5 # 手动设置爬取次数
     try:
         r = requests.get(url_, headers=headers)
         jResponse = re.findall(r'getLiveListJsonpCallback\((.*?)\)', r.text, re.S)[0]
