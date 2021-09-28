@@ -6,10 +6,6 @@ headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.63 Safari/537.36'
 }
 
-def GoToNextPage(page):
-    # 下一页链接
-    return url + page
-
 def GetTitleAndUrl(url_):
     # 获取直播间标题和链接
     r = requests.get(url_, headers=headers)
