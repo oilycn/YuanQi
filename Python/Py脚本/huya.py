@@ -20,4 +20,5 @@ def GetTitleAndUrl(url_):
         print(zhibo['title'])
         print(zhibo['href'])
 
-GetTitleAndUrl(url)
+if __name__ == '__main__':
+    GetTitleAndUrl(url)
